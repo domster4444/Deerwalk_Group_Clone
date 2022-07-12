@@ -1,0 +1,113 @@
+#home_page {
+  .img_division {
+    height: 22rem;
+    overflow: hidden;
+    width: 100%;
+    // img {
+    //   width: 100%;
+    // }
+    &--upper {
+      background-image: url('../../../../assets/home/upper-division-bg.jpg');
+      background-size: cover;
+      background-position: center;
+    }
+    &--lower {
+      background-image: url('../../../../assets/home/lower-division-bg.jpg');
+      background-size: cover;
+      background-position: center;
+    }
+  }
+}
+
+#category_section {
+  .row {
+    display: flex;
+
+    @include media('<=985px') {
+      flex-direction: column;
+      flex-wrap: wrap;
+    }
+
+    .row__left,
+    .row__right {
+      @include media('<=985px') {
+        transform: translateX(-50%);
+        margin-left: 50%;
+      }
+    }
+
+    .row_left {
+      // set left block to right corner for large screens
+      @include media('>=985px') {
+        display: flex;
+        justify-content: flex-end;
+        width: 50%;
+      }
+
+      //   background: $primary_blue_light;
+      @include media('<=985px') {
+        width: 100%;
+      }
+    }
+    .row_right {
+      @include media('>=985px') {
+        display: flex;
+        justify-content: flex-start;
+        width: 50%;
+      }
+
+      //   background: $secondary_green;
+      @include media('<=985px') {
+        width: 100%;
+      }
+    }
+  }
+}
+.row__right {
+  &--block {
+    @include media('>=985px') {
+      flex-direction: row-reverse;
+      display: flex;
+    }
+  }
+}
+
+.row__left,
+.row__right {
+  display: flex;
+  &--block {
+    display: flex;
+    align-items: center;
+
+    padding: 3rem 2rem;
+    cursor: pointer;
+    width: 85%;
+    background: $primary_white;
+    border: 1px solid $tertiary_black;
+    transition: all ease-in-out 300ms;
+
+    &:hover {
+      transition: all ease-in-out 400ms;
+      border: 1px solid transparent;
+      background: transparent;
+
+      i,
+      h3 {
+        color: $primary_white;
+      }
+    }
+
+    i {
+      font-size: 4.5rem;
+      margin: 1rem;
+    }
+
+    h3 {
+      color: $link-variation;
+      font-size: 2.2rem;
+      @include media('<=768px') {
+        font-size: 1.8rem;
+      }
+    }
+  }
+}

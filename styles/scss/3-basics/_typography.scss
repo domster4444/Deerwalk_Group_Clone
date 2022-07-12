@@ -1,0 +1,10 @@
+//fonts user in deerwalk group -opensans light
+// Open Sans
+.opensans_base {
+  font-family: 'Open Sans', sans-serif;
+}
+
+.opensans_light {
+  @extend .opensans_base;
+  // font-weight: 300;
+}

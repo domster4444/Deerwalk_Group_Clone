@@ -1,0 +1,16 @@
+button {
+  cursor: pointer;
+}
+.primary_btn {
+  background-color: #e2e2e2;
+  outline: none;
+  border: none;
+  font-weight: bold;
+  font-size: 1.3rem;
+  padding: 1rem;
+  border: 1px solid $secondary_black_light;
+  border-radius: 0.25rem;
+  &:hover {
+    color: $primary_blue;
+  }
+}
